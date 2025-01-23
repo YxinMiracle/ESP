@@ -1,0 +1,70 @@
+def process_label_data(cti_json_data: dict) -> dict:
+    labels_data = cti_json_data["labelSets"]
+    cti_labelId_2_labelName_dict = {}
+    for label_data in labels_data:
+        label_set_items = label_data["labelItems"]
+        for label_item in label_set_items:
+            label_id = label_item["id"]
+            label_name = label_item["labelName"]
+            if label_id not in cti_labelId_2_labelName_dict: cti_labelId_2_labelName_dict[label_id] = label_name
+    return cti_labelId_2_labelName_dict
+
+
+cti_labelId_2_labelName_dict = {'hvYZEVXqY-5n7mGpZJSoA': 'alias-of', 'BYQTBBa8R9lhnxMoC4pWU': 'attributed-to',
+                                'wQpnRB0AH5erd8PdLhr1W': 'authored-by', 'P9kjLuxfz-pcHaH575FCA': 'beacons-to',
+                                'n9uBZ_dqAcOuOYRzdfZ2P': 'communicates-with', 'MHNOa0ndul3ko5HokEidM': 'compromises',
+                                'jv-UZR9aliWqmFv0n_u6W': 'consists-of', 'JqxQgaEqYOtdV3ggxMgPb': 'controls',
+                                'T1yAOSJsEhcVchWuqfT1_': 'delivers', 'lzvl2JHwRb0QDw4WcAIjA': 'downloads',
+                                'iDLsM9SkWNJpnRpWYeOFB': 'drops', 't-1hzZxsPtIgLJHXhTGi3': 'exfiltrates-to',
+                                'e4l9GD8STV5wN_xSwXRRA': 'exploits', 'pODlFQn7lag62SgAz3MrE': 'has',
+                                'pkSJ4xVGXZ9kvNoPvTIBy': 'hashes-to', 'vcHrkq9y_cM8mUP3ExsA-': 'hosts',
+                                'gkPyB4djV1GcS5POXytHp': 'impersonates', 'wXHlvP_vCSyhFE7X49sHT': 'located-at',
+                                'uaw_vP5lbvTthfuE69fP2': 'originates-from', '1vpB4sr347TWp_WJToHn-': 'owns',
+                                'JFS4LKBSIbpylPs5boJIz': 'resolves-to', 'mkyObWK1S7P3_Gdc2BHsH': 'targets',
+                                'uses': 'uses', 'kNaAebN0pj-D-0oW8Pc6j': 'variant-of', 'intrusion-set': 'intrusion-set',
+                                'malware': 'malware', 'file-hash': 'file-hash', 'file-name': 'file-name',
+                                'tool': 'tool', 'domain-name': 'domain-name', 'ipv4-addr': 'ipv4-addr',
+                                'vulnerability': 'vulnerability', 'wzqLbXTeS84JTJ1_jeHSd': 'campaign',
+                                'campaign': 'campaign',
+                                'infrastructure': 'infrastructure',
+                                'url': 'url',
+                                'http-request-ext': 'http-request-ext',
+                                'attack-pattern': 'attack-pattern',
+                                'email-addr': 'email-addr',
+                                'ipv6-addr': 'ipv6-addr',
+                                'windows-registry-key': 'windows-registry-key',
+                                '_w4x5bvcfvLfRo93oTfGP': 'identity', 'XBZd55dS8uGb16dtYJGHk': 'identity_victim',
+                                'CpxHixVreyg_A7LaKQ2SS': 'infrastructure',
+                                'e-y5B9gTP0pMKdWlag96r': 'infrastructure_botnet',
+                                '45P_p30rPX-Qm1Ish6T0r': 'infrastructure_command-and-control',
+                                'ezqigV4cfTfqr9DSOZp7e': 'infrastructure_anonymization',
+                                'k5vp8gateJvdpAVeW3NXY': 'infrastructure_exfiltration',
+                                'Y-abdWM_bIGQC-nM3Q-wo': 'infrastructure_hosting-malware',
+                                '9aCYx9Rx6MxzAy6cBqUsh': 'infrastructure_phishing',
+                                'hwj_7FTqn1jT8SmAQ1a0i': 'infrastructure_reconnaissance',
+                                'kHVMmTbTn566JuS9-1aHp': 'infrastructure_staging',
+                                '-2gdSv9874iF4ir0TUO8x': 'infrastructure_attack',
+                                'y1V2c6CnHifQ0ZmIbnPuF': 'infrastructure_victim',
+                                'ixWuY2Djuu03Ha6uxF3iB': 'infrastructure_amplification',
+                                'RiCiXunw29uFjsgO02aMZ': 'malware', 'JQrkKo1yWbRtt2tfIan__': 'malware_bot',
+                                'htJjQYWK0BFusPfmrLnWV': 'malware_ddos', 'EiANNVh5JqCY4wHRDHddo': 'malware_exploit-kit',
+                                'cFiW9uIxFsGEPlW_3j4bC': 'malware_keylogger',
+                                'duo9Bnx-pb1AF4MojDe8o': 'malware_ransomware',
+                                'x1NmgpXp0lS67gNV0qk2o': 'malware_resource-exploitation',
+                                'NndNoqd7PhURiEg9D48zL': 'malware_screen-capture',
+                                'MK7eDzrn2P0QV3pYhW3q0': 'malware_virus', '6XnN2VBfpZ6pb4Du02pfc': 'malware_webshell',
+                                'DiA5sybkldLjVRsKY-xgr': 'malware_worm',
+                                'OfGUtxNt7jaSWz5yjDyig': 'malware_remote-access-trojan', 'threat-actor': 'threat-actor',
+                                'dnOX1-Puohlukv76Erl6u': 'intrusion-set', '8TUHecg5OxjYwjXiThti5': 'location',
+                                'GM7ayIRlKiaItgEXVWtb1': 'file-name', 'AoVUlVMHKDkSgYVOtbS1_': 'file-hash',
+                                'IXIeZaxPCgMresq4EEmPd': 'process', 'software': 'software',
+                                'tmwP1-GeltC_5J-AyTYGU': 'mutex', 'XMuAnycag_sNAoXYCWCN3': 'artifact',
+                                'bEddyu2FmIXylbka41K1g': 'autonomous-system', 'directory': 'directory',
+                                'SxKrI2ON2S0jUgCRe95qG': 'email-addr', '2OfiNG-YcdrtMNThg5kUo': 'md5',
+                                'qUNBSEv8dMumTePgb4i3C': 'sha1', '8M2y0zUDdUU7R_2E7ErHG': 'sha256',
+                                'NtXMuH9khRUgrz3Mv0y-B': 'sha512', '9npdl5gNHCYLVmBgbwmM9': 'ipv6-addr',
+                                '8nKvaCINxdpLz82lCfTU6': 'mac-addr', 'pagc5AdqYy6zA3chBWwIk': 'url',
+                                '3DDw4bLL5doIzwzrZTIl3': 'user-account',
+                                'cRBUrkskrOQMyWQsPWx-D': 'windows-registry-key',
+                                'H-7cjASc8j-in_QI3u60H': 'x509-certificate', 'authored-by': 'authored-by',
+                                'downloads': 'downloads', 'hashes-to': 'hashes-to', 'drops': 'drops'}

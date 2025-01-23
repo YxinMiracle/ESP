@@ -1,0 +1,8 @@
+*.pkl
+__pycache__/*
+glove.6B.*.txt
+.idea/
+-p/
+experiments/
+
+

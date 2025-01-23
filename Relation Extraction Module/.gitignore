@@ -1,0 +1,8 @@
+.idea
+target/
+huawei_data_process/huawei_json/
+__pycache__/*
+data/
+*.json
+save/
+test/
