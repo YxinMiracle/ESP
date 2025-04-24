@@ -1,0 +1,2 @@
+After the initial infection, the second stage IcedID DLL communicated with the following C2 servers:
+IP：94.232.46.27. Port:443. Domain:evinakortu[.]com. JA3:a0e9f5d64349fb13191bc781f81f42e1,1138de370e523e824bbca92d049a3777. JA3s:N/A

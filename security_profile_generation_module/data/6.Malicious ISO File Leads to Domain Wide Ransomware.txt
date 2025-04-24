@@ -1,0 +1,5 @@
+Mark-of-the-Web Bypass
+The threat actors delivered the initial malware as a zip file, with the contents of a ISO file, which contained their payload to gain access to the target environment. These packages are designed to evade controls such as Mark-of-the-Web restrictions.
+Windows Defender tampering
+On one host, the threat actors ran the following command to try and clear the way for their activity, likely due to the difficulty the threat actors were having with beacons crashing.
+powershell.exe Uninstall-WindowsFeature -Name Windows-Defender-GUI.

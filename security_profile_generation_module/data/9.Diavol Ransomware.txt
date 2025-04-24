@@ -1,0 +1,3 @@
+After the initial execution, the malware contacted two of its C2 IPs: 159.223.31.75.
+
+

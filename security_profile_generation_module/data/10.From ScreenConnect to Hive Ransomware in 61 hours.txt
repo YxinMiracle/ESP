@@ -1,0 +1,1 @@
+About 40 minutes later, two hours and seven minutes into the intrusion, the threat actor leveraged another stager based on System.Net.WebClient‘s DownloadFile function to drop %temp%\P6nqEdwk.exe. This trojanized executable was downloaded from http://94.232.43[.]201:8080/dQhNZOV3Qm and subsequently executed.
