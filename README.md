@@ -136,24 +136,106 @@ done
 The data set of this module is in the `data` directory. Due to the size limit of the warehouse, we provide a part of the data set as a demo.
 `total_re_task_data_list.pt` stores the data we have processed. The data structure in this file is a `List[ReSentBaseData]`.
 
-```json
 Data Example:
-{
-  'fine_tuned_re_model_tokens': ['[OBJ_TASK]', 'Recognition', 'of', 'proper', 'nouns', '[/OBJ_TASK]', 'in', 'Japanese', 'text', 'has', 'been', 'studied', 'as', 'a', 'part', 'of', 'the', 'more', 'general', 'problem', 'of', '[SUB_TASK]', 'morphological', 'analysis', '[/SUB_TASK]', 'in', 'Japanese', 'text', 'processing', '(', '[', '1', ']', '[', '2', ']', ')', '.'],
-  'head_entity': {
-  	'eneity_name': 'Recognition of proper nouns',
-  	'entity_name_list': ['Recognition', 'of', 'proper', 'nouns']
-  }
-  'reconstructed_sent': 'The relation between "Recognition of proper nouns" and "morphological analysis" in the context: "Recognition of proper nouns in Japanese text has been studied as a part of the more general problem of morphological analysis in Japanese text processing ( [ 1 ] [ 2 ] ) ."'
-  'relation_type': 'Part-of',
-  'sent': 'Recognition of proper nouns in Japanese text has been studied as a part of the more general problem of morphological analysis in Japanese text processing ( [ 1 ] [ 2 ] ) .',
-  'sent_token_list': ['Recognition', 'of', 'proper', 'nouns', 'in', 'Japanese', 'text', 'has', 'been', 'studied', 'as', 'a', 'part', 'of', 'the', 'more', 'general', 'problem', 'of', 'morphological', 'analysis', 'in', 'Japanese', 'text', 'processing', '(', '[', '1', ']', '[', '2', ']', ')', '.']
-  'tail_entity': {
-  	'eneity_name': 'morphological analysis',
-  	'entity_name_list': ['morphological', 'analysis']
-  }
-}
 
+```json
+{
+    "fine_tuned_re_model_tokens": [
+        "[OBJ_TASK]",
+        "Recognition",
+        "of",
+        "proper",
+        "nouns",
+        "[/OBJ_TASK]",
+        "in",
+        "Japanese",
+        "text",
+        "has",
+        "been",
+        "studied",
+        "as",
+        "a",
+        "part",
+        "of",
+        "the",
+        "more",
+        "general",
+        "problem",
+        "of",
+        "[SUB_TASK]",
+        "morphological",
+        "analysis",
+        "[/SUB_TASK]",
+        "in",
+        "Japanese",
+        "text",
+        "processing",
+        "(",
+        "[",
+        "1",
+        "]",
+        "[",
+        "2",
+        "]",
+        ")",
+        "."
+    ],
+    "head_entity": {
+        "eneity_name": "Recognition of proper nouns",
+        "entity_name_list": [
+            "Recognition",
+            "of",
+            "proper",
+            "nouns"
+        ]
+    },
+    "reconstructed_sent": "The relation between 'Recognition of proper nouns' and 'morphological analysis' in the context: 'Recognition of proper nouns in Japanese text has been studied as a part of the more general problem of morphological analysis in Japanese text processing ( [1 ] [2 ] ) .",
+    "relation_type": "Part-of",
+    "sent": "Recognition of proper nouns in Japanese text has been studied as a part of the more general problem of morphological analysis in Japanese text processing ( [1 ] [2 ] ) .",
+    "sent_token_list": [
+        "Recognition",
+        "of",
+        "proper",
+        "nouns",
+        "in",
+        "Japanese",
+        "text",
+        "has",
+        "been",
+        "studied",
+        "as",
+        "a",
+        "part",
+        "of",
+        "the",
+        "more",
+        "general",
+        "problem",
+        "of",
+        "morphological",
+        "analysis",
+        "in",
+        "Japanese",
+        "text",
+        "processing",
+        "(",
+        "[",
+        "1",
+        "]",
+        "[",
+        "2",
+        "]",
+        ")",
+        "."
+    ],
+    "tail_entity": {
+        "eneity_name": "morphological analysis",
+        "entity_name_list": [
+            "morphological",
+            "analysis"
+        ]
+    }
+}
 ```
 
 ##### Run training and classification
